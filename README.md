@@ -30,44 +30,40 @@ Program
 ```
 import numpy as np
 import matplotlib.pyplot as plt
-
-
-Am = 6.8
-fm = 532
-fs = 53200
-t = np.arange(0, 2/fm, 1/fs)
-
-m = Am * np.cos(2 * np.pi * fm * t)
-plt.subplot(3, 1, 1)
-plt.plot(t, m)
-
-Ac = 13.6
-fc = 5320
-c = Ac * np.cos(2 * np.pi * fc * t)
-plt.subplot(3, 1, 2)
-plt.plot(t, c)
-
-B = 6.9
-s = Ac * np.cos(2 * np.pi * fc * t + B * np.sin(2 * np.pi * fm * t))
-plt.subplot(3, 1, 3)
-plt.plot(t, s)
-
+Am=4.1
+fm=343
+fs=34300
+Ac=8.2
+fc=3430
+t=np.arange(0,2/fm,1/fs)
+B=4.2
+m=Am*np.cos(2*np.pi*fm*t)
+plt.subplot(3,1,1)
+plt.plot(t,m)
+c=Ac*np.cos(2*np.pi*fc*t)
+plt.subplot(3,1,2)
+plt.plot(t,c)
+s=Ac*np.cos((2*np.pi*fc*t)+B*np.sin(2*np.pi*fm*t))
+plt.subplot(3,1,3)
+plt.plot(t,s)
 plt.tight_layout()
+plt.show()
 ```
 Output Waveform
 
-<img width="712" height="545" alt="image" src="https://github.com/user-attachments/assets/c37a602f-1952-4c43-8ba2-559370717f57" />
+![WhatsApp Image 2025-11-13 at 09 10 16_8bd0f052](https://github.com/user-attachments/assets/f05a4bec-f719-4a55-a65a-66e9f5ed8d60)
+
 
 
 Tabular Column
+![WhatsApp Image 2025-11-13 at 09 16 31_f5027410](https://github.com/user-attachments/assets/fbf3c6c1-d05b-4118-875e-6436bcab3cd7)
 
-![WhatsApp Image 2025-10-28 at 10 36 44_97d8ca82](https://github.com/user-attachments/assets/8b19cd38-4229-443b-9ccc-25b60e09be1f)
 
 
 
 Calculation
+![WhatsApp Image 2025-11-13 at 09 16 41_b161f5c9](https://github.com/user-attachments/assets/44843892-0835-495e-a309-4e202548c9b1)
 
-![WhatsApp Image 2025-10-28 at 10 36 49_4cc62f3a](https://github.com/user-attachments/assets/1183c324-ce73-4a06-b088-a552890c1159)
 
 
 
